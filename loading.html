@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh" style="height:100%;">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="css/style.css">
+	<title>inner</title>
+</head>
+<body class="load">
+	
+	<div class="innerBox">
+		<div class="eye">
+			<div class="left">
+				<img id="leftImg" src="images/left_a.png" alt="">
+			</div>
+			<div class="right">
+				<img id="rightImg" src="images/right_a.png" alt="">
+			</div>
+			<div id="texts" class="text"></div>
+		</div>
+	</div>
+	
+	<script>
+		
+		var levels = 1;
+		var texts = document.getElementById("texts");
+		var leftImg = document.getElementById("leftImg");
+		var rightImg = document.getElementById("rightImg");
+		function nexts(){
+			switch(levels){
+				case 1:
+					texts.innerHTML="别眨眼";
+					break;
+				case 2:
+					texts.innerHTML = "优惠即刻送达"
+					break;
+				case 3:
+					changeFont(3)
+					
+					break;
+				case 4:
+					changeFont(2)
+					break;
+				case 5:
+					changeFont(1)
+					break;
+				case 6:
+					changeFont("开始")
+					break;
+			}
+			if(levels<=6){
+				levels++;
+				setTimeout("nexts()",500)
+			}else{
+				window.location.href="inner.html"
+			}
+		}
+		nexts()
+		
+		
+		function changeFont(numbers){
+			texts.className = "text"
+			setTimeout(function(){
+				texts.innerHTML = numbers;
+				if(typeof(numbers)!="string"){
+					leftImg.setAttribute("src","images/left_"+numbers+".png")
+					rightImg.setAttribute("src","images/right_"+numbers+".png")
+					setTimeout(function(){
+						texts.className="text active";
+					},50);
+				}
+			},100)
+			
+		}
+	</script>
+</body>
+</html>

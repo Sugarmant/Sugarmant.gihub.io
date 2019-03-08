@@ -36,13 +36,11 @@
 			}else{
 				spand.innerHTML+="."
 			}
-			wi++;wi++;wi++;wi++;
-			wi++;wi++;wi++;wi++;
-			cardom.style.cssText = "left:"+wi+"px";
+			wi+=20;
 			if(bodys.offsetWidth>wi){
 				setTimeout("carMove()",100)
 			}else{
-				console.log("loadingOk")
+				window.location.href="loading.html"
 			}
 		}
 		
