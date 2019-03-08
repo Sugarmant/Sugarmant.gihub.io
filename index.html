@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh" style="height:100%;">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="css/style.css">
+	<title>主页</title>
+</head>
+<body class="index">
+	<div class="carbox">
+		<div class="box">
+			<div class="carImg">
+				<img id="img" src="images/car.png" alt="">
+			</div>
+		</div>
+		<div class="text">优惠太大，努力加载中<span>...</span></div>
+	</div>
+	
+	<script>
+		var cardom = document.getElementById("img");
+		var bodys = document.querySelector("body");
+		var spand = document.querySelector(".text span")
+		var wi;
+		window.onload=function(){
+			cardom.style.cssText = "left:"+(-cardom.width)+"px";
+			wi = (-cardom.width)
+			console.log(wi)
+			carMove()
+		}
+		
+		
+		function carMove(){
+			if(spand.innerHTML == "..."){
+				spand.innerHTML = ""
+			}else{
+				spand.innerHTML+="."
+			}
+			wi++;wi++;wi++;wi++;
+			wi++;wi++;wi++;wi++;
+			cardom.style.cssText = "left:"+wi+"px";
+			if(bodys.offsetWidth>wi){
+				setTimeout("carMove()",100)
+			}else{
+				console.log("loadingOk")
+			}
+		}
+		
+	</script>
+</body>
+</html>
