@@ -13,11 +13,15 @@
 		.list .btn{width:100%;display:flex;justify-content:center;align-items:center;position:fixed;bottom:0;background-color:#C00000;padding:15px 0;}
 		.list .btn a{background-color:#fff;color:#c00000;font-weight:bold;padding:5px 15px;border-radius:4px;letter-spacing:3px;}
 		.box>img{width:100%;padding:40px;box-sizing:border-box;margin-top:25px;}
-		.list .list-li{background:none;width:50%;float:left;box-sizing:border-box;}
+		.list .list-ul{padding:15px;}
+		.list .list-li{background:none;width:50%;float:left;box-sizing:border-box;padding:0 10px;}
 		.list .list-li .img{width:100%;background-color:#fff;float:left;border-radius:10px;overflow:hidden;}
 		.list .list-li img{width:100%;display:table}
 		.list .list-li .text{width:100%;text-align:center;padding-top:10px;float:left;color:#fff;letter-spacing:1px;}
 		.bar{float:left}
+		
+		/* 设置商品背景 */
+		.list .list-li .img span{display:block;background:url(images/code.png) no-repeat;width:100%;height:100%;background-size:contain;background-position:center center}
 	</style>
 </head>
 <body class="list">
@@ -26,37 +30,37 @@
 		<div class="list-ul">
 			<div class="list-li">
 				<div class="img">
-					<img src="images/code.png" alt="">
+					<span></span>
 				</div>
 				<div class="text">儿童安全座椅</div>
 			</div>
 			<div class="list-li">
 				<div class="img">
-					<img src="images/code.png" alt="">
+					<span></span>
 				</div>
 				<div class="text">儿童安全座椅</div>
 			</div>
 			<div class="list-li">
 				<div class="img">
-					<img src="images/code.png" alt="">
+					<span></span>
 				</div>
 				<div class="text">儿童安全座椅</div>
 			</div>
 			<div class="list-li">
 				<div class="img">
-					<img src="images/code.png" alt="">
+					<span></span>
 				</div>
 				<div class="text">儿童安全座椅</div>
 			</div>
 			<div class="list-li">
 				<div class="img">
-					<img src="images/code.png" alt="">
+					<span></span>
 				</div>
 				<div class="text">儿童安全座椅</div>
 			</div>
 			<div class="list-li">
 				<div class="img">
-					<img src="images/code.png" alt="">
+					<span></span>
 				</div>
 				<div class="text">儿童安全座椅</div>
 			</div>
@@ -74,6 +78,11 @@
 			autoplay: false,//可选选项，自动滑动
 		})
 		window.onload=function(){
+			var listUlWidth = document.querySelector(".list .list-ul").scrollWidth-(15*2);
+			var imgBox = document.querySelectorAll(".list .list-li .img");
+			for(var i = 0;i<imgBox.length;i++){
+				imgBox[i].style.height = listUlWidth/4+"px"
+			}
 			var ss = document.querySelectorAll(".swiper-slide");
 			for(var i = 0;i<ss.length;i++){
 				ss[i].style.height=document.querySelector("body").scrollHeight+"px";
