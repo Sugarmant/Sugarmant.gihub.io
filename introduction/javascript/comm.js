@@ -1,6 +1,6 @@
 var config = {
 	
-	objUrl:"http://http://sugarmant.github.io/introduction/",
+	objUrl:"http://sugarmant.github.io/introduction/",
 	
 	addJs:function(_url){
 		var scriptDom = document.createElement("script");
