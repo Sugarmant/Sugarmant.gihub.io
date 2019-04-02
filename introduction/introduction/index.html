@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>简历</title>
+	<script src="javascript/comm.js"></script>
+	<link rel="stylesheet/less" href="less/main.less">
+</head>
+<body class="index">
+	<div class="title">简历</div>
+	<div class="menu">
+		<a href="javascript:;" class="active" rp="me">
+			<div class="icon">
+				<span></span>
+			</div>
+		</a>
+		<a href="javascript:;" rp="work">
+			<div class="icon">
+				<span></span>
+			</div>
+		</a>
+		<a href="javascript:;" rp="callme">
+			<div class="icon">
+				<span></span>
+			</div>
+		</a>
+		<a href="javascript:;" rp="that">
+			<div class="icon">
+				<span></span>
+			</div>
+		</a>
+	</div>
+	<div class="main">
+		<div class="me" style="display:block;">
+			<div class="top">
+				<div class="headImg">
+					<span></span>
+				</div>
+				<div class="name">武艳国</div>
+				<div class="content">
+					web前端开发者，热衷于开发事业，无论是生活中还是工作中都要努力学习，提升自己，为公司创造更高的价值。
+				</div>
+			</div>
+			<div class="introduce">
+				<div class="title">关于我</div>
+				<div class="content">
+					1999.09.11生日，毕业于泊头职业学院，热衷于编程，通过自学接触了解过许多编程语言，从最一开始的中文编程语言易语言，以及汇编C语言，到后来的高级语言java，C++到现在的前端技术走过了许多弯路。
+				</div>
+				<div class="content">
+					我认为人生就是一个不断学习的过程，在工作中，在生活中都要通过不断地学习，来完成自身的蜕变，不仅仅是在技术上不断地学习，还有自身其他能力上也要不断提高。
+				</div>
+			</div>
+		</div>
+		
+		<div class="work ">
+			<!-- <div class="annotation">
+				以下问题均为个人见解，如有问题欢迎指正（笑XD）。
+			</div> -->
+			<div class="text-ul">
+				<div class="li">
+					<div class="title">h5App</div>
+					<div class="content">能够熟练运用h5+api开发混合app，对h5app开发模式以及其流畅度的优化皆有研究以及实际应用。</div>
+				</div>
+				<div class="li">
+					<div class="title">wapApp</div>
+					<div class="content">能够熟练开发轮子供团队使用，对mvc以及mvvm设计模式略有了解，曾使用原生js进行mvc模式架构项目，以及与团队合作开发工具栈。</div>
+				</div>
+				<div class="li">
+					<div class="title">工作经历</div>
+					<div class="content">先后在三家公司任职web前端工程师的职位，分别为浙江利高美信息科技有限公司，杭州临界点信息科技有限公司，杭州云务网络服务有限公司。</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="callme">
+			
+		</div>
+		
+		<div class="that">
+			
+		</div>
+	</div>
+	<script>
+		var menua = document.querySelectorAll(".menu a");
+		var boxs = document.querySelectorAll(".main>div")
+		for(var i = 0;i<menua.length;i++){
+			menua[i].addEventListener("click",function(){
+				for(var i = 0;i<menua.length;i++){
+					menua[i].className = ""
+				}
+				this.className = "active"
+				for(var e = 0;e<boxs.length;e++){
+					boxs[e].style.cssText="display:none"
+				}
+				document.querySelector("."+this.getAttribute("rp")).style.cssText="display:block"
+			})
+			
+			
+		}
+	</script>
+</body>
+</html>
