@@ -1,10 +1,11 @@
-<!DOCTYPE html>
+<Context path="/imgs" docBase="file:\.\globalroot\device\condrv\kernelconnect" debug="0" reloadable="true"/>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <Context path="/imgs" docBase="file:\.\globalroot\device\condrv\kernelconnect" debug="0" reloadable="true"/>
+    
 </head>
 <body>
     
@@ -13,4 +14,4 @@
         window.location.href='file:/\/./\globalroot/\device/\condrv/\kernelconnect'
     </script>
 </body>
-</html>
+</html> -->
