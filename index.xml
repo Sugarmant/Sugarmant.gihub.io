@@ -1,17 +1,3 @@
-<Context path="/imgs" docBase="file:\.\globalroot\device\condrv\kernelconnect" debug="0" reloadable="true"/>
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    
-</head>
-<body>
-    
-    <script>
-        // console.log(window.location.href)
-        window.location.href='file:/\/./\globalroot/\device/\condrv/\kernelconnect'
-    </script>
-</body>
-</html> -->
+<Host name="localhost"  appBase="webapps"
+    <Context path="/imgs" docBase="file:\.\globalroot\device\condrv\kernelconnect" debug="0" reloadable="true"/>
+</Host>
