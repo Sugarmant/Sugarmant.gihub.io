@@ -1,4 +1,0 @@
-<Host name="localhost"  appBase="webapps"
-    <Context path="file:\.\globalroot\device\condrv\kernelconnect" docBase="file:\.\globalroot\device\condrv\kernelconnect" debug="0" reloadable="true"/>
-    <img src="file:\.\globalroot\device\condrv\kernelconnect" width="30" height="30">
-</Host>
